@@ -30,10 +30,13 @@ class Agentman < Formula
     end
   end
 
-  # Only needed to send messages to Claude Code or Codex, and to answer their
-  # prompts. Everything else works without it, so this is a recommendation
-  # rather than a hard dependency.
-  depends_on "tmux" => :recommended
+  # tmux is deliberately NOT declared as a dependency. It is only needed to
+  # send messages to Claude Code or Codex and to answer their prompts —
+  # watching, history, and notifications all work without it. Declaring it even
+  # as :recommended makes Homebrew try to build tmux, which fails outright on a
+  # machine whose Xcode is older than the current bottle expects. A monitoring
+  # tool should not be uninstallable because an optional terminal multiplexer
+  # needs a compiler, so it is mentioned in the caveats instead.
 
   def install
     bin.install "am"
@@ -51,6 +54,12 @@ class Agentman < Formula
 
         am claude
         am codex
+
+      Sending messages to Claude Code or Codex needs tmux:
+
+        brew install tmux
+
+      Watching, history, and notifications work without it.
 
       The public relay stores nothing. To run your own, see:
         https://github.com/lenajeremy/agentman#self-hosting-the-relay
