@@ -6,26 +6,26 @@ cask "agentman" do
     end
   end
 
-  version "0.25.0"
+  version "0.26.0"
 
   on_macos do
     on_intel do
-      sha256 "b8ead167fdec9c87174fc8a2d3ff04e32b152bc33972de4352c380a414978e16"
+      sha256 "c7edf3daf70cd9b20d68ebab227b61254fe12c7f44469dbe95cc3094cc20bef3"
       url "https://github.com/lenajeremy/agentman/releases/download/v#{version}/agentman_v#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "6d80d36f055479e1368f4e4d9b39e53ae3ff6ca1e135b86f3b315fcebfd22bc2"
+      sha256 "ce0f016044977643d6a132e9a3e8fc93c95adc55fa1d447e80e066608b39c473"
       url "https://github.com/lenajeremy/agentman/releases/download/v#{version}/agentman_v#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "d704ab21ffd416dbc1d4b1f3157a0bf4430eba5e6ffae0b8dcbb9f35eeaf1790"
+      sha256 "abfe30f1f660dad3d99698e2b28ff571c1bad640faeb86fab1a8f348c60d9e90"
       url "https://github.com/lenajeremy/agentman/releases/download/v#{version}/agentman_v#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "8e2d8b9108bbe078a298f3844993ce50a20e8a815d08e21268486dc46b4c7a99"
+      sha256 "31f765ed4ad35e4f4952772bd1329f37de56f1c03cea9a09c2eb015b03374c3e"
       url "https://github.com/lenajeremy/agentman/releases/download/v#{version}/agentman_v#{version}_linux_arm64.tar.gz"
     end
   end
